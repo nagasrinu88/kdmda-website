@@ -1,8 +1,10 @@
 // src/lib/firebaseAdmin.js
 import { initializeApp, cert, getApps } from 'firebase-admin/app';
 
+let firebaseAdminApp;
+
 if (!getApps().length) {
-  initializeApp({
+    firebaseAdminApp  = initializeApp({
     credential: cert({
       projectId: process.env.FIREBASE_PROJECT_ID,
       clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
@@ -11,5 +13,4 @@ if (!getApps().length) {
   });
 }
 
-const firebaseAdmin =initializeApp;
-export default firebaseAdmin;
+export default firebaseAdminApp;

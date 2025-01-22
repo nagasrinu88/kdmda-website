@@ -1,5 +1,7 @@
 import { getFirestore } from 'firebase-admin/firestore';
-import { firebaseAdmin } from '../../lib/firebaseAdmin'; // Adjust the import based on your project structure
+// import { firebaseAdmin } from '../../lib/firebaseAdmin'; 
+import firebaseAdmin from '../../lib/firebaseAdmin';
+
 
 const db = getFirestore(firebaseAdmin);
 const collectionName = 'homams';
