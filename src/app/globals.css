@@ -25,3 +25,24 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.table-container {
+  @apply overflow-x-auto;
+}
+
+.table {
+  @apply min-w-full bg-table-bg shadow-sm rounded-lg;
+}
+
+.table-header {
+  @apply bg-table-header-bg;
+}
+
+.table-divider {
+  @apply divide-y divide-table-divider;
+}
+
+.table-cell {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider;
+}

@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'table-bg': '#FFFBEB', // bg-yellow-100
+        'table-header-bg': '#FEF3C7', // bg-yellow-200
+        'table-divider': '#FDE68A', // divide-yellow-300
       },
     },
   },

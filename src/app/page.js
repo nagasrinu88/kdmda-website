@@ -9,14 +9,14 @@ export default function Home() {
           src="/images/IMG_20240417_081716.jpg" // You'll need to add this image to your public folder
           alt="Temple Hero Image"
           fill
-          className="object-cover -z-10"
+          className="object-cover -z-1"
           priority
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-center mb-4">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-orange-400 p-8 bg-black/60">
+          <h1 className="text-3xl md:text-2xl font-bold text-center mb-4">
             Sri Kanakadurga Mahadevi Alayam.
           </h1>
-          <p className="text-xl md:text-2xl text-center max-w-2xl">
+          <p className="text-xl md:text-xl text-center max-w-xl text-orange-200">
             Experience the ancient wisdom and peaceful sanctuary of our sacred temple
           </p>
         </div>
