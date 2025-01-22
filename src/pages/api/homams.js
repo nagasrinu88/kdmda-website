@@ -1,5 +1,4 @@
 import { getFirestore } from 'firebase-admin/firestore';
-// import { firebaseAdmin } from '../../lib/firebaseAdmin'; 
 import firebaseAdmin from '../../lib/firebaseAdmin';
 
 

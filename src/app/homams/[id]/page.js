@@ -7,15 +7,15 @@ async function fetchHomamDetails(id) {
     return homam;
 }
 
-export async function generateStaticParams() {
-    const host = process.env.HOST;
-    const response = await fetch(`${host}/api/homams`);
-    const homams = await response.json();
+// export async function generateStaticParams() {
+//     const host = process.env.HOST;
+//     const response = await fetch(`${host}/api/homams`);
+//     const homams = await response.json();
 
-    return homams.map(homam => ({
-        id: homam.id,
-    }));
-}
+//     return homams.map(homam => ({
+//         id: homam.id,
+//     }));
+// }
 
 const HomamPage = async ({ params }) => {
     const { id } = params;
