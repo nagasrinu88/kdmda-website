@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Breadcrumb from './components/Breadcrumb';
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
+        <Breadcrumb />
         <main className="container mx-auto max-w-screen-lg pb-16 bg-white">
           {children}
         </main>

@@ -4,7 +4,6 @@ async function fetchHomams() {
     const host = process.env.HOST;
     const response = await fetch(`${host}/api/homams`);
     const homams = await response.json();
-    console.log(homams);
     return homams;
 }
 

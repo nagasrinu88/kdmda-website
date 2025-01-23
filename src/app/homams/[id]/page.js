@@ -45,14 +45,14 @@ const HomamPage = async ({ params }) => {
                             <tr key={index}>
                                 <td className="py-2 px-4 border-b">{index + 1}</td>
                                 <td className="py-2 px-4 border-b">{donor.name}</td>
-                                <td className="py-2 px-4 border-b">${donor.amount}</td>
+                                <td className="py-2 px-4 border-b">₹{donor.amount}</td>
                                 <td className="py-2 px-4 border-b">{donor.gothram && `(${donor.gothram})`}</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
 
-                <h4 className="text-lg font-semibold mb-2 mt-4">Total Amount: ${homam.totalAmount}</h4>
+                <h4 className="text-lg font-semibold mb-2 mt-4">Total Amount: ₹{homam.totalAmount}</h4>
 
                 <h4 className="text-lg font-semibold mb-2">Expenses</h4>
                 <table className="min-w-full bg-white">
@@ -68,7 +68,7 @@ const HomamPage = async ({ params }) => {
                             <tr key={index}>
                                 <td className="py-2 px-4 border-b">{index + 1}</td>
                                 <td className="py-2 px-4 border-b">{expense.description}</td>
-                                <td className="py-2 px-4 border-b">${expense.amount}</td>
+                                <td className="py-2 px-4 border-b">₹{expense.amount}</td>
                             </tr>
                         ))}
                     </tbody>
