@@ -1,20 +1,15 @@
-"use client"
-
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
 
-const HomamsPage = () => {
+async function fetchHomams() {
+    const host = process.env.HOST;
+    const response = await fetch(`${host}/api/homams`);
+    const homams = await response.json();
+    console.log(homams);
+    return homams;
+}
 
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch('/api/homams');
-            const result = await response.json();
-            setData(result);
-        };
-        fetchData();
-    }, []);
+const HomamsPage = async () => {
+    const data = await fetchHomams();
 
     return (
         <div className="mt-12 max-w-3xl mx-auto">

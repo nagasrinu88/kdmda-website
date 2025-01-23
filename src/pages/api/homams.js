@@ -20,7 +20,7 @@ export default async function handler(req, res) {
     }
   } else {
     // Fetch all documents in the collection
-    const snapshot = await db.collection(collectionName).get();
+    const snapshot = await db.collection(collectionName).select('id', 'displayName', 'date').get();
     const homams = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
     res.status(200).json(homams);
