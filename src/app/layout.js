@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Breadcrumb from './components/Breadcrumb';
+import Script from "next/script";
 
 
 const geistSans = localFont({
@@ -24,6 +25,22 @@ const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-76MTYV89E0`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-76MTYV89E0'); // Replace with your GA Measurement ID
+          `}
+        </Script>
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

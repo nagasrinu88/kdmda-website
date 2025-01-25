@@ -1,6 +1,23 @@
 import Image from "next/image";
 import Timeline from "./components/Timeline";
+import YouTubeShowcase from "./components/YouTubeShowcase";
+
 export default function Home() {
+
+  const videos = [
+    {
+      id: 'GRmAXKs1m7I',
+      title: 'My First Video',
+      description: 'A short description of the first video.',
+    },
+    {
+      id: 'tD6CeO0I0tw3ELwOQ',
+      title: 'Second Video',
+      description: 'A brief description of the second video.',
+    },
+    // Add more video objects...
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -23,6 +40,8 @@ export default function Home() {
       </div>
 
       <Timeline />
+
+      <YouTubeShowcase videos={videos} />
 
       {/* Feature Blocks */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 md:p-16 bg-stone-100">
