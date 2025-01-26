@@ -2,6 +2,11 @@ import Image from "next/image";
 import Timeline from "./components/Timeline";
 import YouTubeShowcase from "./components/YouTubeShowcase";
 
+export const metadata = {
+  title: "Home Page",
+  description: "Welcome to our sacred temple. Experience the ancient wisdom and peaceful sanctuary of our sacred temple.",
+};
+
 export default function Home() {
 
   const videos = [

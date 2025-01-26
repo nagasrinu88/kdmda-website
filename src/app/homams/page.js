@@ -7,6 +7,11 @@ async function fetchHomams() {
     return homams;
 }
 
+export const metadata = {
+    title: 'Homams Page',
+    description: 'View the list of homams performed at the temple.',
+};
+
 const HomamsPage = async () => {
     const data = await fetchHomams();
 

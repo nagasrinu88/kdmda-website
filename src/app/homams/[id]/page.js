@@ -7,19 +7,14 @@ async function fetchHomamDetails(id) {
     return homam;
 }
 
-// export async function generateStaticParams() {
-//     const host = process.env.HOST;
-//     const response = await fetch(`${host}/api/homams`);
-//     const homams = await response.json();
-
-//     return homams.map(homam => ({
-//         id: homam.id,
-//     }));
-// }
+const metadata = {};
 
 const HomamPage = async ({ params }) => {
     const { id } = params;
     const homam = await fetchHomamDetails(id);
+
+    metadata.title = `Homam Details - ${homam.displayName}`;
+    metadata.description = homam.description;
 
     return (
         <div className="container mx-auto p-4">
@@ -87,5 +82,8 @@ const HomamPage = async ({ params }) => {
         </div>
     );
 };
+
+
+export { metadata };
 
 export default HomamPage;

@@ -1,7 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
+
+// export const metadata = {
+//     title: 'Donors Page',
+//     description: 'View the list of donors who have contributed to the temple.',
+// };
 
 export default function Doners() {
 
