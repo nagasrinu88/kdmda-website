@@ -47,6 +47,28 @@ const HomamPage = async ({ params }) => {
                     </tbody>
                 </table>
 
+                <h4 className="text-lg font-semibold mb-2 mt-4">Total Amount: ₹{homam.totalAmount}</h4>
+
+                <h4 className="text-lg font-semibold mb-2">Expenses</h4>
+                <table className="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th className="py-2 px-4 border-b">S.No</th>
+                            <th className="py-2 px-4 border-b">Description</th>
+                            <th className="py-2 px-4 border-b">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {homam.expenses.map((expense, index) => (
+                            <tr key={index}>
+                                <td className="py-2 px-4 border-b">{index + 1}</td>
+                                <td className="py-2 px-4 border-b">{expense.description}</td>
+                                <td className="py-2 px-4 border-b">₹{expense.amount}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+
                 <h4 className="text-lg font-semibold mb-2">Photos</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {homam.photos.map((photo, index) => (
