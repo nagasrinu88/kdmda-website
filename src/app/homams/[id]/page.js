@@ -25,23 +25,21 @@ const HomamPage = async ({ params }) => {
                 <p className="mb-2">Date: {new Date(homam.date).toLocaleDateString()}</p>
                 <p className="mb-4">Time: {homam.time}</p>
 
-                <h4 className="text-lg font-semibold mb-2">Donors</h4>
+                <h4 className="text-lg font-semibold mb-2">దాతలు వివరాలు</h4>
                 <table className="min-w-full bg-white">
                     <thead>
                         <tr>
-                            <th className="py-2 px-4 border-b">S.No</th>
-                            <th className="py-2 px-4 border-b">Donor Name</th>
-                            <th className="py-2 px-4 border-b">Amount</th>
-                            <th className="py-2 px-4 border-b">Other Details</th>
+                            <th className="py-2 px-4 border-b">దాత పేరు</th>
+                            <th className="py-2 px-4 border-b">విరాళం మొత్తం</th>
+                            <th className="py-2 px-4 border-b hidden sm:table-cell">ఇతర వివరాలు</th>
                         </tr>
                     </thead>
                     <tbody>
                         {homam.donors.map((donor, index) => (
                             <tr key={index}>
-                                <td className="py-2 px-4 border-b">{index + 1}</td>
                                 <td className="py-2 px-4 border-b">{donor.name}</td>
                                 <td className="py-2 px-4 border-b">₹{donor.amount}</td>
-                                <td className="py-2 px-4 border-b">{donor.gothram && `(${donor.gothram})`}</td>
+                                <td className="py-2 px-4 border-b hidden sm:table-cell">{donor.gothram && `(${donor.gothram})`}</td>
                             </tr>
                         ))}
                     </tbody>
