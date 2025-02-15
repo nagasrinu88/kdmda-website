@@ -1,20 +1,27 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 
 async function fetchHomamDetails(id) {
-    const host = process.env.HOST;
+    const host = process.env.HOST || 'http://localhost:3000';
     const response = await fetch(`${host}/api/homams?id=${id}`);
     const homam = await response.json();
     return homam;
 }
 
-const metadata = {};
-
-const HomamPage = async ({ params }) => {
+const HomamPage = ({ params }) => {
     const { id } = params;
-    const homam = await fetchHomamDetails(id);
+    const [homam, setHomam] = useState(null);
 
-    metadata.title = `Homam Details - ${homam.displayName}`;
-    metadata.description = homam.description;
+    useEffect(() => {
+        fetchHomamDetails(id).then((homam) => {
+            setHomam(homam);
+        });
+    }, [id]);
+
+    if (!homam) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <div className="container mx-auto p-4">
@@ -58,8 +65,5 @@ const HomamPage = async ({ params }) => {
         </div>
     );
 };
-
-
-export { metadata };
 
 export default HomamPage;
