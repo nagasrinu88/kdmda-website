@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 
 async function fetchHomamDetails(id) {
-    const host = process.env.HOST || 'http://localhost:3000';
+    const host = process.env.NEXT_PUBLIC_HOST || 'http://localhost:3000';
     const response = await fetch(`${host}/api/homams?id=${id}`);
     const homam = await response.json();
     return homam;
