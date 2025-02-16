@@ -1,5 +1,6 @@
 'use client';
 
+import Loader from '@/app/components/Loader';
 import React, { useEffect, useState } from 'react';
 
 async function fetchHomamDetails(id) {
@@ -20,7 +21,12 @@ const HomamPage = ({ params }) => {
     }, [id]);
 
     if (!homam) {
-        return <p>Loading...</p>;
+        return (
+            <div className="container mx-auto p-4">
+            <h2 className="text-2xl font-bold mb-4">Homam Details</h2>
+            <Loader />
+            </div>
+        );
     }
 
     return (
