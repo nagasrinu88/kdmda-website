@@ -17,7 +17,9 @@ const HomamsPage = async () => {
 
     return (
         <div className="mt-12 max-w-3xl mx-auto">
-            <h1 className="text-2xl font-bold mb-4">Homams performed at alayam</h1>
+            <h1 className="font-bold py-4">
+                ఓంశ్రీ మాత్రే నమః <br />
+                ప్రతి నెల శ్రీ కానక దుర్గ మహాదేవియే ఆలయం నందు జరుగుచున్న హోమం యొక్క వివరాలు.</h1>
             <div className="table-container">
                 <table className="table">
                     <thead className="table-header">

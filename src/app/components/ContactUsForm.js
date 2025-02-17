@@ -7,7 +7,7 @@ const ContactUsForm = () => {
     const [action, setAction] = React.useState(null);
     return (
         <Form
-            className="w-full max-w-xs flex flex-col gap-4"
+            className="w-full flex flex-col gap-4 p-2"
             validationBehavior="native"
             onReset={() => setAction("reset")}
             onSubmit={(e) => {

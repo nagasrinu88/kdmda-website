@@ -4,7 +4,7 @@ import YouTubeShowcase from "./components/YouTubeShowcase";
 import ImageSlider from "./components/ImageSlider";
 
 export const metadata = {
-  title: "Home Page",
+  title: "శ్రీ కానక దుర్గ మహాదేవి ఆలయం - హోమ్ పేజీ",
   description: "Welcome to our sacred temple. Experience the ancient wisdom and peaceful sanctuary of our sacred temple.",
 };
 

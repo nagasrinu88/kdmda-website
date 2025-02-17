@@ -10,16 +10,17 @@ export const metadata = {
 
 export default function App() {
     return (
-        <div className="pt-8-container mx-auto px-4 py-8">
-            <Card className="max-w-[400px] mx-auto">
-                <CardHeader className="flex gap-3">
-                    <p className="text-lg">Please contact us for any queries or support.</p>
-                </CardHeader>
-                <CardBody>
-                    <ContactUsForm />
-                </CardBody>
-            </Card>
+
+        <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <Image src="/images/contact-us.jpg" alt="Contact Us" className="w-full h-auto" />
+            </div>
+            <div className="flex justify-end border-l-2">
+                <ContactUsForm />
+            </div>
         </div>
+
+
     );
 }
 

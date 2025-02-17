@@ -1,19 +1,23 @@
 const Loader = () => {
-    return (<div className="bg-white shadow-md rounded-lg p-6">
-        <div className="animate-pulse">
-            <div className="h-6 bg-gray-300 rounded mb-4"></div>
-            <div className="h-4 bg-gray-300 rounded mb-2"></div>
-            <div className="h-4 bg-gray-300 rounded mb-2"></div>
-            <div className="h-3 bg-gray-500 rounded mb-4"></div>
-            <div className="h-2 bg-gray-200 rounded mb-2"></div>
-            <div className="h-4 bg-gray-100 rounded mb-2"></div>
-            <div className="h-4 bg-gray-300 rounded mb-2"></div>
-            <div className="h-4 bg-gray-300 rounded mb-4"></div>
-            <div className="h-6 bg-gray-400 rounded mb-2"></div>
-            <div className="h-4 bg-gray-300 rounded mb-2"></div>
-            <div className="h-4 bg-gray-300 rounded mb-2"></div>
+    return (
+        <div className="animate-pulse space-y-4">
+            {/* Header Skeleton */}
+            <div className="h-8 bg-gray-400 rounded w-3/4"></div>
+
+            {/* Image Skeleton */}
+            <div className="h-48 bg-gray-300 rounded"></div>
+
+            {/* Text Skeleton */}
+            <div className="space-y-2">
+                <div className="h-4 bg-gray-500 rounded"></div>
+                <div className="h-4 bg-gray-300 rounded w-5/6"></div>
+                <div className="h-4 bg-gray-400 rounded w-4/6"></div>
+            </div>
+
+            {/* Button Skeleton */}
+            <div className="h-10 bg-gray-300 rounded w-24"></div>
         </div>
-    </div>);
+    );
 }
 
 export default Loader;
