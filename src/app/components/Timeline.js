@@ -36,46 +36,51 @@ const Timeline = () => {
     // Add more timeline items as needed
   ];
 
+  const refs = [];
+  const isInViews = [];
+  refs[0] = useRef(null);
+  refs[1] = useRef(null);
+  refs[2] = useRef(null);
+
+  isInViews[0] = useInView(refs[0], { once: true });
+  isInViews[1] = useInView(refs[1], { once: true });
+  isInViews[2] = useInView(refs[2], { once: true });
+
   return (
     <div className="max-w-4xl mx-auto py-16 px-4">
       <h2 className="text-3xl font-bold text-center mb-12">Temple Timeline</h2>
       <div className="space-y-8">
-        {timelineItems.map((item, index) => {
-          const ref = useRef(null);
-          const isInView = useInView(ref, { once: true });
-
-          return (
-            <motion.div
-              key={index}
-              ref={ref}
-              className="my-2"
-              initial="hidden"
-              animate={isInView ? 'visible' : 'hidden'}
-              variants={sectionVariants}
-              transition={{ duration: 0.75 }}
-            >
-              <Card className="flex flex-col md:flex-row gap-8">
-                <CardHeader className="md:w-1/3">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={300}
-                    height={200}
-                    className="rounded-lg object-cover w-full h-48"
-                  />
-                </CardHeader>
-                <CardBody className="md:w-2/3">
-                  <div className="flex items-center gap-2 text-orange-600 mb-2">
-                    <time className="font-semibold">{item.time}</time>
-                    <span className="text-sm">{item.frequency}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p>{item.description}</p>
-                </CardBody>
-              </Card>
-            </motion.div>
-          );
-        })}
+        {timelineItems.map((item, index) => (
+          <motion.div
+            key={index}
+            ref={refs[index]}
+            className="my-2"
+            initial="hidden"
+            animate={isInViews[index] ? 'visible' : 'hidden'}
+            variants={sectionVariants}
+            transition={{ duration: 0.8 }}
+          >
+            <Card className="flex flex-col md:flex-row gap-8">
+              <CardHeader className="md:w-1/3">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={300}
+                  height={200}
+                  className="rounded-lg object-cover w-full h-48"
+                />
+              </CardHeader>
+              <CardBody className="md:w-2/3">
+                <div className="flex items-center gap-2 text-orange-600 mb-2">
+                  <time className="font-semibold">{item.time}</time>
+                  <span className="text-sm">{item.frequency}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p>{item.description}</p>
+              </CardBody>
+            </Card>
+          </motion.div>
+        ))}
       </div>
     </div>
   );
