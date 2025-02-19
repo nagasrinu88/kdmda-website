@@ -2,6 +2,7 @@ import Image from "next/image";
 import Timeline from "./components/Timeline";
 import YouTubeShowcase from "./components/YouTubeShowcase";
 import ImageSlider from "./components/ImageSlider";
+import FeaturesBlock from "./components/FeaturesBlock";
 
 export const metadata = {
   title: "శ్రీ కానక దుర్గ మహాదేవి ఆలయం - హోమ్ పేజీ",
@@ -76,20 +77,7 @@ export default function Home() {
       <YouTubeShowcase videos={videos} />
 
       {/* Feature Blocks */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 md:p-16 bg-stone-100">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">Sacred History</h2>
-          <p className="text-gray-600">Discover the rich heritage and spiritual significance of our ancient temple.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">Meditation Space</h2>
-          <p className="text-gray-600">Find inner peace in our dedicated meditation halls and peaceful gardens.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">Daily Ceremonies</h2>
-          <p className="text-gray-600">Join our daily rituals and spiritual ceremonies led by temple masters.</p>
-        </div>
-      </div>
+      <FeaturesBlock />
       
     </div>
   );

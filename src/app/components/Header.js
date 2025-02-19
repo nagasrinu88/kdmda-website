@@ -20,15 +20,16 @@ export default function Header() {
 
   return (
     <Navbar isBordered className="bg-red-800" onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent className="sm:hidden" justify="start">
+      <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-      </NavbarContent>
-      <NavbarBrand>
+        <NavbarBrand justify="end">
         <Image src="/logo.jpg" alt="Logo" width={62} height={62} />
       </NavbarBrand>
+      </NavbarContent>
+      
       <NavbarContent className="hidden sm:flex gap-1" justify="start">
         <NavbarItem>
           <Link href="/" className="text-white hover:text-gray-900 px-3 py-2 flex items-center">

@@ -6,8 +6,8 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
 };
 
 const Timeline = () => {
@@ -58,7 +58,7 @@ const Timeline = () => {
             initial="hidden"
             animate={isInViews[index] ? 'visible' : 'hidden'}
             variants={sectionVariants}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1 }}
           >
             <Card className="flex flex-col md:flex-row gap-8">
               <CardHeader className="md:w-1/3">
