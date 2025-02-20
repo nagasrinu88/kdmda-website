@@ -45,8 +45,8 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <Breadcrumb />
-        <main className="container mx-auto max-w-screen-lg pb-16 bg-white">
+        {/* <Breadcrumb /> */}
+        <main className="flex-grow width-full pb-16 bg-white">
           {children}
         </main>
         <Footer />

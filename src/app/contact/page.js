@@ -1,7 +1,8 @@
 import React from "react";
-import ContactUsForm from "../components/ContactUsForm";
+import { motion } from "framer-motion";
 
 import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from "@heroui/react";
+import ContactUsForm from "../components/ContactUsForm";
 
 export const metadata = {
     title: 'Contact Us',
@@ -10,17 +11,9 @@ export const metadata = {
 
 export default function App() {
     return (
-
-        <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-                <Image src="/images/contact-us.jpg" alt="Contact Us" className="w-full h-auto" />
-            </div>
-            <div className="flex justify-end border-l-2">
-                <ContactUsForm />
-            </div>
+        <div>
+            <ContactUsForm />
         </div>
-
-
     );
 }
 
