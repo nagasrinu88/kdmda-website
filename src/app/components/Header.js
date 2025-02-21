@@ -13,6 +13,7 @@ export default function Header() {
 
   const menuItems = [
     {label:"Home", icon:HomeIcon, href:"/"},
+    {label:"Temple Gallery", icon:HomeIcon, href:"/gallery"},
     {label:"Homams", icon:FireIcon, href:"/homams"},
     {label:"Donors", icon:UserIcon, href:"/donors"},
     {label:"Contact Us", icon:UserIcon, href:"/contact"}
@@ -31,30 +32,13 @@ export default function Header() {
       </NavbarContent>
       
       <NavbarContent className="hidden sm:flex gap-1" justify="start">
-        <NavbarItem>
-          <Link href="/" className="text-white hover:text-gray-900 px-3 py-2 flex items-center">
-            <HomeIcon className="h-5 w-5 mr-1" />
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="/homams" className="text-white hover:text-gray-900 px-3 py-2 flex items-center">
-            <FireIcon className="h-5 w-5 mr-1" />
-            Homams
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/donors" className="text-white hover:text-gray-900 px-3 py-2 flex items-center">
-            <UserIcon className="h-5 w-5 mr-1" />
-            Donors
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="/contact" className="text-white hover:text-gray-900 px-3 py-2 flex items-center">
-            <UserIcon className="h-5 w-5 mr-1" />
-            Contact Us
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item, index) => (
+          <NavbarItem key={index}>
+            <Link href={item.href} className="text-white hover:text-gray-900 px-3 py-2 flex items-center">
+              {item.label}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
       <NavbarMenu>
