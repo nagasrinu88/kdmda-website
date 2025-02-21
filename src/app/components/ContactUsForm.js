@@ -38,7 +38,7 @@ const ContactUsForm = () => {
                     className="absolute text-center text-white"
                 >
                     <h1 className="text-4xl sm:text-5xl font-bold mb-4">Contact Us</h1>
-                    <p className="text-lg sm:text-xl">We'd love to hear from you!</p>
+                    <p className="text-lg sm:text-xl">We would love to hear from you!</p>
                 </motion.div>
             </div>
 

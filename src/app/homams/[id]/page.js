@@ -1,6 +1,7 @@
 'use client';
 
 import Loader from '@/app/components/Loader';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 async function fetchHomamDetails(id) {
@@ -62,7 +63,7 @@ const HomamPage = ({ params }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {homam.photos.map((photo, index) => (
                         <div key={index} className="bg-gray-100 p-2 rounded-lg">
-                            <img src={photo.url} alt={photo.description} className="w-full h-auto rounded-md mb-2" />
+                            <Image src={photo.url} alt={photo.description} className="w-full h-auto rounded-md mb-2" />
                             <p className="text-center">{photo.description}</p>
                         </div>
                     ))}
