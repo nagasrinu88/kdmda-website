@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const EventTimeline = ({ events }) => {
+const EventTimeline = ({ eventDetails }) => {
     return (
         <div className="container mx-auto px-4 py-12">
             <div className="relative">
@@ -11,7 +11,7 @@ const EventTimeline = ({ events }) => {
                 <div className="absolute left-1/2 w-1 h-full bg-gray-200 transform -translate-x-1/2"></div>
 
                 {/* Timeline Entries */}
-                {events.map((event, index) => (
+                {eventDetails.images.map((event, index) => (
                     <motion.div
                         key={event.id}
                         initial={{ opacity: 0, y: 50 }}
