@@ -13,8 +13,8 @@ export default function Header() {
 
   const menuItems = [
     {label:"Home", icon:HomeIcon, href:"/"},
-    {label:"Temple Gallery", icon:HomeIcon, href:"/gallery"},
     {label:"Homams", icon:FireIcon, href:"/homams"},
+    {label:"Events", icon:FireIcon, href:"/events"},
     // {label:"Donors", icon:UserIcon, href:"/donors"},
     {label:"Contact Us", icon:UserIcon, href:"/contact"}
   ];

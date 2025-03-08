@@ -36,9 +36,9 @@ export default function Home() {
       {/* Hero Section */}
       <ImageSlider heroItems={images} interval={5000} />
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto border-2 border-gray-200">
         {/* Temple Timings */}
-        <div className="my-2">
+        <div className="">
           <div className="bg-orange-200 p-6 shadow-lg">
             <h2 className="text-center text-red-800 text-2xl font-bold mb-2">శ్రీ కనకదుర్గ మహాదేవి ఆలయం - దర్శన సమయాలు</h2>
 
@@ -61,7 +61,7 @@ export default function Home() {
         <YouTubeShowcase videos={videos} />
 
         {/* Feature Blocks */}
-        <FeaturesBlock />
+        {/* <FeaturesBlock /> */}
       </div>
     </div>
   );
